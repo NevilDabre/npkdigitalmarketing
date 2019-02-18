@@ -1,0 +1,70 @@
+/* Forms */
+.mbr-form .btn {
+    margin: .4rem 0;
+  }
+  .mbr-form .input-group-btn a.btn {
+    border-radius: 100px !important;
+  }
+  .mbr-form .input-group-btn a.btn:hover {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+  }
+  .mbr-form .input-group-btn button[type="submit"] {
+    border-radius: 100px !important;
+    padding: 1rem 3rem;
+  }
+  .mbr-form .input-group-btn button[type="submit"]:hover {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+  }
+
+.multi-horizontal {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    max-width: 100%;
+}
+
+.btn-primary,
+.btn-primary:active {
+  background-color: #652888 !important;
+  border-color: #652888 !important;
+  color: #ffffff !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary.active {
+  color: #ffffff !important;
+  background-color: #39174d !important;
+  border-color: #39174d !important;
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #ffffff !important;
+  background-color: #39174d !important;
+  border-color: #39174d !important;
+}
+
+.btn-primary-outline,
+.btn-primary-outline:active {
+  background: none;
+  border-color: #2a1139;
+  color: #2a1139;
+}
+.btn-primary-outline:hover,
+.btn-primary-outline:focus,
+.btn-primary-outline.focus,
+.btn-primary-outline.active {
+  color: #ffffff;
+  background-color: #652888;
+  border-color: #652888;
+}
+.btn-primary-outline.disabled,
+.btn-primary-outline:disabled {
+  color: #ffffff !important;
+  background-color: #652888 !important;
+  border-color: #652888 !important;
+}
+
+.mt-10
+{
+    margin-top: 10px;
+}
