@@ -3,21 +3,14 @@ import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux';
 import store from './components/store.js';
-import ContactForm from './components/contactForm';
-
 import ReduxToastr from 'react-redux-toastr';
 
 import * as serviceWorker from './serviceWorker';
+import { env } from './config';
 
-class ContactFormApp extends React.Component {
-  render() {
-    return (
-      <Provider store={ store }>
-        <ContactForm />
-      </Provider>
-    );
-  }
-}
+import App from './App';
+
+ReactDOM.render(<App env={env} />, document.getElementById('contactUsFormContainer'));
 
 /* <Provider store={store}>
 <div>
@@ -32,6 +25,6 @@ class ContactFormApp extends React.Component {
 </div>
 </Provider> */
 
-ReactDOM.render(<ContactFormApp />, document.getElementById('contactUsFormContainer'));
+//ReactDOM.render(<ContactFormApp env={env} />, document.getElementById('contactUsFormContainer'));
 
 serviceWorker.register();
