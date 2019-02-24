@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-require('dotenv').config();
+require('dotenv').config({ silent: process.env.NODE_ENV === 'production' });
+
+console.log('Process Env' , process.env);
 
 const divStyle = {
   marginTop: '10px'
@@ -80,6 +82,8 @@ export default class ContactForm extends Component {
 
   handleSubmit(event) {
         event.preventDefault();
+
+        console.log('this.process.env =', this.process.env);
 
         const {
           REACT_APP_EMAILJS_INQUIRY_TEMPLATEID: webInquiryTemplateId,
