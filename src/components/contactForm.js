@@ -6,6 +6,13 @@ const divStyle = {
   marginTop: '10px'
 };
 
+function showMessage(message) {
+  var x = document.getElementById("snackbar")
+  x.className = "show";
+  x.innerText = message;
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
 export default class ContactForm extends Component {
   constructor() {
     super();
@@ -24,25 +31,25 @@ export default class ContactForm extends Component {
     //Name
     if(!fields["name"]){
        formIsValid = false;
-       errors["name"] = "Cannot be empty";
+       errors["name"] = "Pleasse enter your name";
     }
 
     //Message
     if(!fields["message"]){
           formIsValid = false;
-          errors["message"] = "Cannot be empty";
+          errors["message"] = "Please enter your message";
        }
 
     //Phone
     if(!fields["phone"]){
       formIsValid = false;
-      errors["phone"] = "Cannot be empty";
+      errors["phone"] = "Please enter your phone";
    }
 
     //Email
     if(!fields["email"]){
        formIsValid = false;
-       errors["email"] = "Cannot be empty";
+       errors["email"] = "Please enter your email";
     }
 
     if(typeof fields["email"] !== "undefined"){
@@ -51,7 +58,7 @@ export default class ContactForm extends Component {
 
        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
           formIsValid = false;
-          errors["email"] = "Email is not valid";
+          errors["email"] = "Please enter a valid email";
         }
    }  
 
@@ -116,7 +123,7 @@ export default class ContactForm extends Component {
      *  2. Send Email to Inquirer  
      * */ 
 
-    window.emailjs
+     window.emailjs
       .send(serviceId, 	webInquiryTemplateId, {
         name, phone, email, message
       }, userId)
@@ -132,7 +139,11 @@ export default class ContactForm extends Component {
           fields: {},
           errors: {}
         });
-      })
+
+        document.getElementById('contactForm').reset();
+
+        showMessage('Thank You! Your information submitted successfully.');
+       })
       .catch(err => console.error('Failed to send feedback. Error: ', err));
   }
 

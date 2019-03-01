@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Provider } from 'react-redux';
-import store from './components/store.js';
-import ReduxToastr from 'react-redux-toastr';
-
 //import * as serviceWorker from './serviceWorker';
 import { env } from './config';
 
