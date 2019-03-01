@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './components/store.js';
 import ReduxToastr from 'react-redux-toastr';
 
-import * as serviceWorker from './serviceWorker';
+//import * as serviceWorker from './serviceWorker';
 import { env } from './config';
 
 import App from './App';
@@ -25,6 +25,4 @@ ReactDOM.render(<App env={env} />, document.getElementById('contactUsFormContain
 </div>
 </Provider> */
 
-//ReactDOM.render(<ContactFormApp env={env} />, document.getElementById('contactUsFormContainer'));
-
-serviceWorker.register();
+//serviceWorker.register();

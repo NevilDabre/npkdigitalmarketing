@@ -128,7 +128,9 @@ export default class ContactForm extends Component {
       })
       .then(res=>{
         this.setState({
-          formEmailSent: true
+          formEmailSent: true,
+          fields: {},
+          errors: {}
         });
       })
       .catch(err => console.error('Failed to send feedback. Error: ', err));
