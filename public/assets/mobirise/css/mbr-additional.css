@@ -2234,3 +2234,14 @@ body {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
+
+
+  
+  @media (max-width: 768px){
+    .heading-title{
+      margin-top: 55px;
+    }  
+    .heading-sub-title{
+      font-size: 1.5rem;
+    }
+  }
